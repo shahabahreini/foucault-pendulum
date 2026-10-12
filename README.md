@@ -9,6 +9,10 @@
 
 **[Try the interactive model](https://shahabahreini.com/projects/foucault-pendulum/)**: change the latitude and watch the swing plane turn.
 
+[![Isometric model of the Foucault pendulum: a bob on a cut wire over a brass degree ring with thirty pins, a latitude globe and a precession-rate dial](docs/img/foucault-pendulum-model.png)](https://shahabahreini.com/projects/foucault-pendulum/)
+
+*The interactive model runs this repository's integrator in the browser. Its JavaScript copy matches the C++ output to 10⁻¹⁴ m.*
+
 ![Path of a 67 m Foucault pendulum seen from above, fanning out clockwise by 45 degrees in four hours at latitude 49 degrees](figures/trace-first-hours.png)
 
 ## In one paragraph
@@ -83,6 +87,11 @@ t, x, y = trace.T
 times, angle = plane_angle_deg(t, x, y)   # degrees, negative = clockwise
 ```
 
+### Checking another implementation
+
+`python -m foucault_tools.fixture --bin build/foucault-sim --out fixture.json` writes the solver's output for six cases
+(three latitudes, the equator, and Ω × 300 in both models) as JSON. The website's JavaScript port is tested against it.
+
 ### As a C++ library
 
 The core is header-only:
@@ -133,9 +142,9 @@ with centrifugal terms, the numerical method and its limits are in [docs/method.
 include/foucault/   header-only core: params, model, rk4
 src/main.cpp        foucault-sim command line tool
 tests/              CTest executables
-python/             foucault-tools package and foucault-plot
+python/             foucault-tools package, foucault-plot and the fixture writer
 data/reference/     2021 outputs, used as a regression fixture
-docs/               method, notes on the 2021 report, references
+docs/               method, notes on the 2021 report, references, images
 figures/            plots drawn by foucault-plot
 ```
 

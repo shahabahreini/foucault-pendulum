@@ -1,0 +1,16 @@
+build/
+cmake-build-*/
+out/
+*.o
+*.exe
+*.out
+__pycache__/
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
+# Raw long runs: regenerate with foucault-sim
+*.trace.tsv

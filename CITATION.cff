@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "foucault-pendulum: Foucault pendulum simulation with fourth-order Runge-Kutta"
+type: software
+version: 1.0.0
+date-released: 2026-10-12
+license: MIT
+repository-code: "https://github.com/shahabahreini/foucault-pendulum"
+url: "https://shahabahreini.com/projects/foucault-pendulum/"
+abstract: >-
+  A C++17 solver and Python analysis tools for the Foucault pendulum in the Earth-fixed
+  frame. Fourth-order Runge-Kutta integrates the Coriolis-coupled equations of motion,
+  and the swing-plane precession is checked against the closed-form solution and the
+  analytic period (sidereal day divided by sin of latitude).
+keywords:
+  - Foucault pendulum
+  - Coriolis force
+  - Earth rotation
+  - Runge-Kutta
+  - computational physics
+  - numerical simulation
+authors:
+  - family-names: Bahreini Jangjoo
+    given-names: Shahab
+    website: "https://shahabahreini.com"
